@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import Dashboard from './components/Dashboard/Dashboard';
+import Dashboard from './pages/Dashboard';
 import GitHubContextProvider from './context/GithubContext';
 
 function App() {

@@ -5,7 +5,7 @@ import { userInfo } from '../staticData/userInfo';
 import { reposInfo } from '../staticData/reposInfo';
 import { followersInfo } from '../staticData/followersInfo';
 
-// import axios from 'axios'
+// import axios from '../axios';
 
 export const GitHubContext = createContext();
 
