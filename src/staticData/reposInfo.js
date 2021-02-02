@@ -1,4 +1,4 @@
-export const Repo = [
+export const reposInfo = [
         {
           "id": 296054757,
           "node_id": "MDEwOlJlcG9zaXRvcnkyOTYwNTQ3NTc=",

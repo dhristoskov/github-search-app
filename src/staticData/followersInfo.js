@@ -1,4 +1,4 @@
-export const Followers = [
+export const followersInfo = [
     {
       "login": "Filkolev",
       "id": 6649017,

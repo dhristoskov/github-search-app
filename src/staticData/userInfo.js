@@ -1,4 +1,4 @@
-export const User = {
+export const userInfo = {
     "login": "dhristoskov",
     "id": 10851930,
     "node_id": "MDQ6VXNlcjEwODUxOTMw",
