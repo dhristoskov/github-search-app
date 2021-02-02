@@ -1,0 +1,28 @@
+.userinfo-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-right: 15px;
+    padding: 5px 10px;
+    border: 1px solid blue;
+    &-icon {
+        width: 35px;
+        height: 35px;
+        background-color: burlywood;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 22px;
+    }
+    &-content {
+        margin-left: 10px;
+        &__label, &__value {
+            font-size: 16px;
+        }
+        &__value {
+            font-weight: 600;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+    }
+}

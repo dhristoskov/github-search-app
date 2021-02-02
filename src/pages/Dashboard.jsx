@@ -1,14 +1,19 @@
 import React, { useContext } from 'react';
 
 import { GitHubContext } from '../context/GithubContext';
-import UserInfo from '../components/UserInfo/UserInfo';
+import UserUpperSection from '../components/UserUpperSection/UserUpperSection';
+import UserLowerSectio from '../components/UserLowerSection/UserLowerSection';
 
 const Dashboard = () => {
 
     const { user } = useContext(GitHubContext);
 
     return(
-        <UserInfo user={user} />
+        <div>
+            <UserUpperSection user={user} />
+            <UserLowerSectio user={user}/>
+        </div>
+        
     )
 }
 
