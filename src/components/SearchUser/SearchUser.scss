@@ -1,15 +1,25 @@
 .search-wrapper {
-    width: 70%;
+    width: 100%;
     margin: 40px auto;
 
     &-form {
+        position: relative;
         display: flex;
         justify-content: space-between;
         width: 100%;
+        &-icon {
+            color:  #BAC9BA;
+            position: absolute;
+            font-size: 24px;
+            z-index: 10;
+            top: 8px;
+            left: 10px;
+        }
+
         &__input {
             width: 84%; 
             position: relative; 
-            padding: 10px 0 10px 25px;
+            padding: 10px 0 10px 40px;
             border: none;
             outline: none;    
             border: 1px solid #392D32;

@@ -2,8 +2,10 @@ import React from 'react';
 
 import './Repositories.scss'
 
-const Repositories = () => {
+const Repositories = (props) => {
 
+    console.log(props.repos);
+    
     return (
         <div>Repositories</div>
     )
