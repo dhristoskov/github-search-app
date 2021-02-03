@@ -18,18 +18,19 @@ const GitHubContextProvider = ( props ) => {
 
     const searchUser = async (newUser) =>{
         const response = await axios.get(`${baseURL}/users/${newUser}`)
-        .catch((err) => console.log(err))
+        .catch((err) => console.log(err));
+
         if(response) {
             const { login, followers_url } = response.data
             setUser(response.data);
 
-            axios.get(`${baseURL}/users/${login}/repos`)
+            await axios.get(`${baseURL}/users/${login}/repos`)
             .then(res => setRepos(res.data))
             .catch((err) => console.log(err));
 
-            axios.get(`${followers_url}`)
+            await axios.get(`${followers_url}`)
             .then(res => setFollowers(res.data))
-            .catch((err) => console.log(err))
+            .catch((err) => console.log(err));
         }
     }
 

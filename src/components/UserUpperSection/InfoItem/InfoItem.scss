@@ -1,18 +1,26 @@
 .userinfo-item {
     display: flex;
     align-items: center;
-    width: 100%;
+    min-width: 170px;
     justify-content: center;
-    margin-right: 15px;
-    padding: 5px 10px;
-    border: 1px solid blue;
+    padding: 10px;
+    border: 1px solid #392D32;
+    box-shadow: 5px 5px 6px 1px  #BAC9BA;
+    border-radius: 20px;
+    margin: 15px auto;
+
     &-icon {
-        width: 35px;
-        height: 35px;
-        background-color: burlywood;
+        position: relative;
+        width: 36px;
+        height: 36px;
+        background-color: #BAC9BA;
         border-radius: 50%;
-        text-align: center;
-        font-size: 22px;
+        i {
+            position: absolute;
+            top: 7px;
+            left: 8px;
+            font-size: 20px;
+        }
     }
     &-content {
         margin-left: 10px;
@@ -20,9 +28,9 @@
             font-size: 16px;
         }
         &__value {
-            font-weight: 600;
+            font-weight: 800;
             font-size: 18px;
-            margin-left: 10px;
+            margin-left: 5px;
         }
     }
 }

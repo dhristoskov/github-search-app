@@ -1,0 +1,37 @@
+.search-wrapper {
+    width: 70%;
+    margin: 40px auto;
+
+    &-form {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &__input {
+            width: 80%; 
+            position: relative; 
+            padding: 10px 0 10px 25px;
+            border: none;
+            outline: none;    
+            border: 1px solid #392D32;
+            box-shadow: 5px 5px 6px 1px  #BAC9BA;
+            border-radius: 20px;
+        }
+        &__btn { 
+            width: 15%;
+            font-size: 16px;
+            padding: 10px;
+            background-color: transparent;
+            outline: none;
+            font-weight: 600;
+            color: #BAC9BA;
+            border: 1px solid #392D32;
+            box-shadow: 5px 5px 6px 1px  #BAC9BA;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            &:hover{
+                color:#392D32;
+            }
+        }
+    }
+}

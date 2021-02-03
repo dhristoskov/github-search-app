@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 
+import './SearchUser.scss';
+
 const SerachUser = (props) => {
 
     const [ user, setUser ] = useState('');
+    const { searchUser } = props
 
     const onFormSubmit = (e) => {
         e.preventDefault();
-        props.searchUser(user);
+        searchUser(user);
         setUser('')
     }
 
@@ -16,11 +19,12 @@ const SerachUser = (props) => {
     };
 
     return (
-        <div>
-            <form onSubmit={onFormSubmit}>
-                <input type="text" placeholder='Enter GitHub User' name='user'
-                 value={user} onChange={onHandleChange}/>
-                <input type='submit' value='Search' />
+        <div className='search-wrapper'>
+            <form className='search-wrapper-form' onSubmit={onFormSubmit}>
+                <input className='search-wrapper-form__input' type="text" 
+                                placeholder='Enter GitHub User' name='user'
+                                value={user} onChange={onHandleChange}/>
+                <input className='search-wrapper-form__btn' type='submit' value='Search' />
             </form>
         </div>
     )

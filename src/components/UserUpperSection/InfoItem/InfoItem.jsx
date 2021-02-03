@@ -13,7 +13,7 @@ const InfoItem = (props) => {
 
     return (
         <div className='userinfo-item' onClick={ props.id === 'repos' ? onRepoMove : null }>
-            <span className='userinfo-item-icon'>{ props.icon }</span>
+            <span className='userinfo-item-icon'><i>{ props.icon }</i></span>
             <div className='userinfo-item-content'>
                 <span className='userinfo-item-content__label'>{ props.label }</span>
                 <span className='userinfo-item-content__value'>{ props.value }</span>

@@ -10,6 +10,7 @@ const UserUpperSection = ( props ) => {
 
     const { followers, following, public_repos, public_gists} = props.user;
 
+    // Info Items Array
     const infoItems = [
         {
             id: 'repos',

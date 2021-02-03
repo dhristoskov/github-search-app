@@ -10,9 +10,9 @@ const Dashboard = () => {
     const { user, followers, searchUser } = useContext(GitHubContext);
 
     return(
-        <div>      
+        <div>   
+            <SerachUser searchUser={searchUser} />   
             <UserUpperSection user={user} />
-            <SerachUser searchUser={searchUser} />
             <UserLowerSectio user={user} 
                     followers={followers}
             />

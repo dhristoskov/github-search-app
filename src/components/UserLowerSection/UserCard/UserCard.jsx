@@ -1,9 +1,10 @@
-import React from 'react'
-import { MdLocationCity, MdBusiness } from 'react-icons/md'
+import React from 'react';
+import { MdLocationCity, MdBusiness, MdShortText } from 'react-icons/md';
 
 import './UserCard.scss'
 
 const UserCard = (props) => {
+    console.log(props.user)
     
     const { avatar_url, name, html_url, company, bio, location, } = props.user
    
@@ -12,14 +13,17 @@ const UserCard = (props) => {
             <header className='user-card-header'>
                 <img className='user-card-header__image' src={avatar_url} alt={name}/>
                 <div className='user-card-header__content'>
-                    <p className='user-card-header__content-name'>{ name }</p>
-                    <p className='user-card-header__content-location'><MdLocationCity />{ location }</p>
+                    <span className='user-card-header__content-name'>{ name }</span>
+                    <span className='user-card-header__content-location'>
+                        <MdLocationCity className='icon'/>{ location }</span>
                 </div>
-                <a href={ html_url } className='user-card-header__url'>Follow</a>
+                <a href={ html_url } target="_blank" rel="noopener noreferrer" className='user-card-header__url'>Follow</a>
             </header>
             <div className='user-card-content'>
-                <p className='user-card-content__company'><MdBusiness />{ company }</p>
-                <p className='user-card-content__bio'>{ bio }</p>      
+                <span className='user-card-content__item'><MdBusiness className='icon' />
+                { company || 'no available info' }</span>
+                <span className='user-card-content__item'><MdShortText className='icon' />
+                    { bio || 'no available info' }</span>      
             </div>     
         </div>
     )
