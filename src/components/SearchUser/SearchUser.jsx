@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-const SerachUser = () => {
+const SerachUser = (props) => {
 
     const [ user, setUser ] = useState('');
 
     const onFormSubmit = (e) => {
         e.preventDefault();
-        console.log(user);
+        props.searchUser(user);
         setUser('')
     }
 

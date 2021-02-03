@@ -5,18 +5,37 @@ import { userInfo } from '../staticData/userInfo';
 import { reposInfo } from '../staticData/reposInfo';
 import { followersInfo } from '../staticData/followersInfo';
 
-// import axios from '../axios';
+import axios from 'axios';
+
+const baseURL = 'http://api.github.com';
 
 export const GitHubContext = createContext();
 
 const GitHubContextProvider = ( props ) => {
-    const [ user ] = useState(userInfo);
-    const [ repos ] = useState(reposInfo);
-    const [ followers ] = useState(followersInfo);
+    const [ user, setUser ] = useState(userInfo);
+    const [ repos, setRepos ] = useState(reposInfo);
+    const [ followers, setFollowers ] = useState(followersInfo);
+
+    const searchUser = async (newUser) =>{
+        const response = await axios.get(`${baseURL}/users/${newUser}`)
+        .catch((err) => console.log(err))
+        if(response) {
+            const { login, followers_url } = response.data
+            setUser(response.data);
+
+            axios.get(`${baseURL}/users/${login}/repos`)
+            .then(res => setRepos(res.data))
+            .catch((err) => console.log(err));
+
+            axios.get(`${followers_url}`)
+            .then(res => setFollowers(res.data))
+            .catch((err) => console.log(err))
+        }
+    }
 
     return (
         <GitHubContext.Provider
-        value={{ user, repos, followers }}
+        value={{ user, repos, followers, searchUser }}
         >
             { props.children }
         </GitHubContext.Provider>

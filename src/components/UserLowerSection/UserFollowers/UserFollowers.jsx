@@ -3,8 +3,7 @@ import React from 'react'
 import './UserFollowers.scss'
 
 const UserFollowers = (props) => {
-   
-    console.log(props.followers)
+
     return (
         <div className='user-followers'>
             {

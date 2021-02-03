@@ -7,12 +7,12 @@ import SerachUser from '../components/SearchUser/SearchUser';
 
 const Dashboard = () => {
 
-    const { user, followers } = useContext(GitHubContext);
+    const { user, followers, searchUser } = useContext(GitHubContext);
 
     return(
         <div>      
             <UserUpperSection user={user} />
-            <SerachUser />
+            <SerachUser searchUser={searchUser} />
             <UserLowerSectio user={user} 
                     followers={followers}
             />
