@@ -1,0 +1,42 @@
+.repository {
+    padding: 0 5px;
+    border: 1px solid #392D32;
+    box-shadow: 5px 5px 6px 1px  #BAC9BA;
+    border-radius: 20px;
+    width: 50%;
+    overflow-y: scroll;
+    max-height: 300px;
+    cursor: pointer;
+    &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; 
+    }
+    &-wrapper {
+        display: flex;
+        padding: 15px 25px;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #392D32;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &-link {
+            font-size: 20px;
+            color:#BAC9BA;
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            &__name {
+                font-size: 16px;
+                font-weight: 800;
+            }
+        }
+    }
+}
