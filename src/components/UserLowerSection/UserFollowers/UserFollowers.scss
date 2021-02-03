@@ -1,0 +1,18 @@
+.user-followers {
+    width: 50%;
+    overflow-y: scroll;
+    height: 250px;
+    &-item {
+        display: flex;
+        padding: 5px;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid blue;
+        &__image {
+            border-radius: 50%;
+            border: 1px solid black;
+            width: 15%;
+            height: auto;
+        }
+    }
+}

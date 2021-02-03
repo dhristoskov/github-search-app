@@ -3,15 +3,19 @@ import React, { useContext } from 'react';
 import { GitHubContext } from '../context/GithubContext';
 import UserUpperSection from '../components/UserUpperSection/UserUpperSection';
 import UserLowerSectio from '../components/UserLowerSection/UserLowerSection';
+import SerachUser from '../components/SearchUser/SearchUser';
 
 const Dashboard = () => {
 
-    const { user } = useContext(GitHubContext);
+    const { user, followers } = useContext(GitHubContext);
 
     return(
-        <div>
+        <div>      
             <UserUpperSection user={user} />
-            <UserLowerSectio user={user}/>
+            <SerachUser />
+            <UserLowerSectio user={user} 
+                    followers={followers}
+            />
         </div>
         
     )
