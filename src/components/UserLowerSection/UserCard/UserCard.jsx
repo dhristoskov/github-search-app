@@ -4,8 +4,7 @@ import { MdLocationCity, MdBusiness, MdShortText } from 'react-icons/md';
 import './UserCard.scss'
 
 const UserCard = (props) => {
-    console.log(props.user)
-    
+
     const { avatar_url, name, html_url, company, bio, location, } = props.user
    
     return (

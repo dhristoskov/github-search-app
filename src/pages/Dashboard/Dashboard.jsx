@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 
-import { GitHubContext } from '../context/GithubContext';
-import UserUpperSection from '../components/UserUpperSection/UserUpperSection';
-import UserLowerSectio from '../components/UserLowerSection/UserLowerSection';
-import SerachUser from '../components/SearchUser/SearchUser';
+import { GitHubContext } from '../../context/GithubContext';
+import UserUpperSection from '../../components/UserUpperSection/UserUpperSection';
+import UserLowerSectio from '../../components/UserLowerSection/UserLowerSection';
+import SerachUser from '../../components/SearchUser/SearchUser';
 
 const Dashboard = () => {
 

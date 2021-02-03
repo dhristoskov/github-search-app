@@ -1,4 +1,5 @@
 import React from 'react'
+import { FiLink } from "react-icons/fi";
 
 import './UserFollowers.scss'
 
@@ -14,7 +15,8 @@ const UserFollowers = (props) => {
                             <img className='user-followers-item__image' src={avatar_url} alt={login} />
                             <div className='user-followers-item__content'>
                                 <h5>{ login }</h5>
-                                <a href={ html_url }>{ html_url }</a>
+                                <a className='user-followers-item__content-link'
+                                 href={ html_url }><FiLink className='icon' />{ html_url }</a>
                             </div>  
                         </div>
                     )
