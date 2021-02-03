@@ -13,18 +13,18 @@ const Repositories = (props) => {
 
     return (
         <Fragment>
-            <SearchRepos />
+            <SearchRepos repos={props.repos}/>
             <div className='repository'>    
                 {
                     props.repos.map(repo => {
-                        const { name, language, html_url, forks_url} = repo
+                        const { name, language, html_url } = repo
                         return (
-                            <div className='repository-wrapper' key={repo.id} onClick={() => onTargetClick(html_url)}>
-                                <div className='repository-wrapper-content'>
+                            <div className='repository-wrapper' key={repo.id}>
+                                <div className='repository-wrapper-content' onClick={() => onTargetClick(html_url)}>
                                     <p className='repository-wrapper-content__name'>{name}</p>
                                     <p className='repository-wrapper-content__language'>{language}</p>
                                 </div>
-                                <a className='repository-wrapper-link' href={forks_url} target='_blank' rel='noopener noreferrer'><GoRepoForked /></a>
+                                <a className='repository-wrapper-link' href={html_url} target='_blank' rel='noopener noreferrer'><GoRepoForked /></a>
                             </div>
                             )  
                         })
