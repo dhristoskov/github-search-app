@@ -1,19 +1,16 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import { GoMarkGithub } from 'react-icons/go';
 import SearchUser from '../../SearchUser/SearchUser';
-import { GitHubContext } from '../../../context/GithubContext';
 
 import './Header.scss';
 
-const Header = () => {
-
-    const { searchUser } = useContext(GitHubContext);
+const Header = (props) => {
 
     return (
         <div className='main-header'>
             <GoMarkGithub className='main-header-icon'/>
-            <SearchUser searchUser={searchUser}/>
+            <SearchUser searchUser={props.searchUser}/>
         </div>
     )
 }

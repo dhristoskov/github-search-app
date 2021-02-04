@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { MdSearch } from 'react-icons/md';
 
-import './SearchRepos.scss';
+import './SearchRepos.scss'
 
 const SerachRepo = ({repos, setReposToShow}) => {
 

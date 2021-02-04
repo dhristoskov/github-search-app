@@ -15,8 +15,11 @@ const GitHubContextProvider = ( props ) => {
     const [ user, setUser ] = useState(userInfo);
     const [ repos, setRepos ] = useState(reposInfo);
     const [ followers, setFollowers ] = useState(followersInfo);
+    const [ loading, setLoading ] = useState(false);
+    // const [ error, setError ] = useState({});
 
     const searchUser = async (newUser) =>{
+        setLoading(true);
         const response = await axios.get(`${baseURL}/users/${newUser}`)
         .catch((err) => console.log(err));
 
@@ -32,11 +35,13 @@ const GitHubContextProvider = ( props ) => {
             .then(res => setFollowers(res.data))
             .catch((err) => console.log(err));
         }
-    }
+
+        setLoading(false);
+    };
 
     return (
         <GitHubContext.Provider
-        value={{ user, repos, followers, searchUser }}
+        value={{ user, repos, followers, searchUser, loading }}
         >
             { props.children }
         </GitHubContext.Provider>
