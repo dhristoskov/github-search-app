@@ -22,8 +22,8 @@ const Repositories = (props) => {
                     reposToShow.map(repo => {
                         const { name, language, html_url } = repo
                         return (
-                            <div className='repository-wrapper' key={repo.id}>
-                                <div className='repository-wrapper-content' onClick={() => onTargetClick(html_url)}>
+                            <div className='repository-wrapper' key={repo.id} onClick={() => onTargetClick(html_url)}>
+                                <div className='repository-wrapper-content'>
                                     <p className='repository-wrapper-content__name'>{name}</p>
                                     <p className='repository-wrapper-content__language'>{language}</p>
                                 </div>

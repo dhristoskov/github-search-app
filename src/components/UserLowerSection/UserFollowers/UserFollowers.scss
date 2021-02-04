@@ -3,16 +3,16 @@
     border: 1px solid #392D32;
     box-shadow: 5px 5px 6px 1px  #BAC9BA;
     border-radius: 20px;
-    width: 50%;
+    width: 40%;
     overflow-y: scroll;
-    max-height: 300px;
+    max-height: 350px;
     &::-webkit-scrollbar {
         width: 0px;
         background: transparent; 
     }
     &-item {
         display: flex;
-        padding: 15px 5px 15px 20px;
+        padding: 15px 5px 15px 5px;
         align-items: center;
         border-bottom: 1px solid #392D32;
 

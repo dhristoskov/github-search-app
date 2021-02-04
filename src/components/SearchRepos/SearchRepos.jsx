@@ -24,7 +24,7 @@ const SerachRepo = ({repos, setReposToShow}) => {
             <form className='search-wrapper-form'>
                 <MdSearch className='search-wrapper-form-icon' />
                 <input className='search-wrapper-form__input' type="text" 
-                                placeholder='Search for GitHub Repos' name='filtered'
+                                placeholder='Find Repository' name='filtered'
                                 value={filtered} onChange={onHandleChange}/>
             </form>
         </div>

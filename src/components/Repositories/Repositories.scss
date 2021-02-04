@@ -3,9 +3,10 @@
     border: 1px solid #392D32;
     box-shadow: 5px 5px 6px 1px  #BAC9BA;
     border-radius: 20px;
-    width: 50%;
+    width: 40%;
     overflow-y: scroll;
     max-height: 300px;
+    cursor: pointer;
     &::-webkit-scrollbar {
         width: 0px;
         background: transparent; 
@@ -22,7 +23,6 @@
         }
 
         &-link {
-            cursor: pointer;
             font-size: 20px;
             color:#BAC9BA;
         }
@@ -32,7 +32,6 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            cursor: pointer;
 
             &__name {
                 font-size: 16px;
