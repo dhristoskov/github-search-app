@@ -16,7 +16,6 @@ const GitHubContextProvider = ( props ) => {
     const [ repos, setRepos ] = useState(reposInfo);
     const [ followers, setFollowers ] = useState(followersInfo);
     const [ loading, setLoading ] = useState(false);
-    // const [ error, setError ] = useState({});
 
     const searchUser = async (newUser) =>{
         setLoading(true);

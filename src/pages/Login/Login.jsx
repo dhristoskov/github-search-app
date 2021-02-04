@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react'
+import { useHistory } from 'react-router-dom';
 
 import { GitHubContext } from '../../context/GithubContext';
 
@@ -6,7 +7,8 @@ import './Login.scss';
 
 const Login = () => {
 
-    const { loading, searchUser } = useContext(GitHubContext);
+    const history = useHistory()
+    const { searchUser } = useContext(GitHubContext);
     const [ login, setLogin ] = useState('');
 
     const onHandleChange = (e) => {
@@ -15,9 +17,12 @@ const Login = () => {
     };
 
     const onHandleSubmit = (e) => {
-        e.preventDefault();     
+        e.preventDefault();  
+        if(login) {
+            searchUser(login);
+        }
         setLogin('');
-        console.log(login)
+        history.push('/dashboard');
     };
 
     return (
