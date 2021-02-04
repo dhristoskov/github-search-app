@@ -1,7 +1,7 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 
 import { GoRepoForked } from 'react-icons/go';
-import SearchRepos from '../SearchRepos/SearchRepos';
+import SearchRepos from '../../SearchRepos/SearchRepos';
 
 import './Repositories.scss'
 
@@ -14,7 +14,7 @@ const Repositories = (props) => {
     }
 
     return (
-        <Fragment>
+        <div className='section-warpper'>
             <SearchRepos repos={props.repos}
             setReposToShow={setReposToShow}/>
             <div className='repository'>    
@@ -33,7 +33,7 @@ const Repositories = (props) => {
                         })
                 }
             </div>
-        </Fragment>
+        </div>
        
     )
 }

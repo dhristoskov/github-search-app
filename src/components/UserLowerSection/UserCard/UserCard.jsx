@@ -13,8 +13,10 @@ const UserCard = (props) => {
                 <img className='user-card-header__image' src={avatar_url} alt={name}/>
                 <div className='user-card-header__content'>
                     <span className='user-card-header__content-name'>{ name }</span>
-                    <span className='user-card-header__content-location'>
+                    {  
+                    location && <span className='user-card-header__content-location'>
                         <MdLocationCity className='icon'/>{ location }</span>
+                    }
                 </div>
                 <a href={ html_url } target="_blank" rel="noopener noreferrer" className='user-card-header__url'>Follow</a>
             </header>

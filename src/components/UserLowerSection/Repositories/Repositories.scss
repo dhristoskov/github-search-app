@@ -1,9 +1,12 @@
+.section-warpper {
+    width: 40%;
+}
 .repository {
     padding: 0 5px;
     border: 1px solid #392D32;
     box-shadow: 5px 5px 6px 1px  #BAC9BA;
     border-radius: 20px;
-    width: 40%;
+    width: 100%;
     overflow-y: scroll;
     max-height: 300px;
     cursor: pointer;

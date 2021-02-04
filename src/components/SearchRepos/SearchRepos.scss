@@ -1,0 +1,30 @@
+.search-repo-wrapper {
+    width: 100%;
+    margin-bottom: 15px;
+
+    &__form {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &-icon {
+            color:  #BAC9BA;
+            position: absolute;
+            font-size: 24px;
+            z-index: 10;
+            top: 4px;
+            left: 10px;
+        }
+
+        &-input {
+            width: 100%; 
+            position: relative; 
+            padding: 5px 0 5px 40px;
+            border: none;
+            outline: none;    
+            border: 1px solid #392D32;
+            box-shadow: 5px 5px 6px 1px  #BAC9BA;
+            border-radius: 20px;
+        }
+    }
+}

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import { MdSearch } from 'react-icons/md';
 
+import './SearchRepos.scss';
+
 const SerachRepo = ({repos, setReposToShow}) => {
 
     const [ filtered, setFiltered ] = useState('');
@@ -20,10 +22,10 @@ const SerachRepo = ({repos, setReposToShow}) => {
     }, [filtered, repos, setReposToShow])
 
     return (
-        <div className='search-wrapper'>
-            <form className='search-wrapper-form'>
-                <MdSearch className='search-wrapper-form-icon' />
-                <input className='search-wrapper-form__input' type="text" 
+        <div className='search-repo-wrapper'>
+            <form className='search-repo-wrapper__form'>
+                <MdSearch className='search-repo-wrapper__form-icon' />
+                <input className='search-repo-wrapper__form-input' type="text" 
                                 placeholder='Find Repository' name='filtered'
                                 value={filtered} onChange={onHandleChange}/>
             </form>

@@ -1,18 +1,11 @@
 import React from 'react';
-// import { useHistory } from "react-router-dom";
 
 import './InfoItem.scss'
 
 const InfoItem = (props) => {
 
-    // const history = useHistory()
-
-    const onRepoMove = () => {
-        console.log('pushed')
-    }
-
     return (
-        <div className='userinfo-item' onClick={ props.id === 'repos' ? onRepoMove : null }>
+        <div className='userinfo-item'>
             <span className='userinfo-item-icon'><i>{ props.icon }</i></span>
             <div className='userinfo-item-content'>
                 <span className='userinfo-item-content__label'>{ props.label }</span>

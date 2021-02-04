@@ -1,0 +1,20 @@
+.main-header {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #392D32;
+    box-shadow: 5px 5px 6px 1px  #BAC9BA;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 30px 20px;
+    justify-content: space-between;
+
+    &-icon {
+        font-size: 24px;
+        color: #BAC9BA;
+    }
+}

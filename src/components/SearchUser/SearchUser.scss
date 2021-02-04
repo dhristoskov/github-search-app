@@ -1,6 +1,5 @@
 .search-wrapper {
-    width: 100%;
-    margin: 40px auto;
+    width: 40%;
 
     &-form {
         position: relative;
@@ -12,30 +11,28 @@
             position: absolute;
             font-size: 24px;
             z-index: 10;
-            top: 8px;
+            top: 4px;
             left: 10px;
         }
 
         &__input {
             width: 84%; 
             position: relative; 
-            padding: 10px 0 10px 40px;
+            padding: 5px 0 5px 40px;
             border: none;
             outline: none;    
             border: 1px solid #392D32;
-            box-shadow: 5px 5px 6px 1px  #BAC9BA;
             border-radius: 20px;
         }
         &__btn { 
             width: 15%;
             font-size: 16px;
-            padding: 10px;
+            padding: 5px;
             background-color: transparent;
             outline: none;
             font-weight: 600;
             color: #BAC9BA;
             border: 1px solid #392D32;
-            box-shadow: 5px 5px 6px 1px  #BAC9BA;
             border-radius: 20px;
             cursor: pointer;
             transition: all .3s ease-in-out;
