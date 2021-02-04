@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { MdSearch } from 'react-icons/md';
 
-const SerachRepo = ({repos}) => {
+const SerachRepo = ({repos, setReposToShow}) => {
 
     const [ filtered, setFiltered ] = useState('');
-    // const [ newRepos, setNewRepost ] = useState([])
 
     const onHandleChange = (e) => {
         e.preventDefault();
-        setFiltered(e.target.value)
+        setFiltered(e.target.value);
     };
 
-    // useEffect(() => {
-    //     if( filtered.length > 0 ){
-    //         const newEntry = repos.filter(repo => repo.name.includes(filtered));
-    //         setNewRepost(newEntry);
-    //         console.log(newRepos)
-    //     }
-    // }, [repos, filtered, newRepos])
+    useEffect(() => {
+        const repoCopy = repos.slice()
+        const results = repoCopy.filter(repo =>
+            repo.name.toLowerCase().includes(filtered.toLowerCase())
+          );
+          setReposToShow(results);
+    }, [filtered, repos, setReposToShow])
 
     return (
         <div className='search-wrapper'>

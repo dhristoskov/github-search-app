@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 
 import { GoRepoForked } from 'react-icons/go';
 import SearchRepos from '../SearchRepos/SearchRepos';
@@ -7,16 +7,19 @@ import './Repositories.scss'
 
 const Repositories = (props) => {
 
+    const [ reposToShow, setReposToShow ] = useState(props.repos)
+
     const onTargetClick = (target) => {
         window.open(target);
     }
 
     return (
         <Fragment>
-            <SearchRepos repos={props.repos}/>
+            <SearchRepos repos={props.repos}
+            setReposToShow={setReposToShow}/>
             <div className='repository'>    
                 {
-                    props.repos.map(repo => {
+                    reposToShow.map(repo => {
                         const { name, language, html_url } = repo
                         return (
                             <div className='repository-wrapper' key={repo.id}>
