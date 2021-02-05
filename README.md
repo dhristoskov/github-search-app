@@ -1,3 +1,8 @@
+#### `GitHub Search App (searching for users by name and searching in user's repositories)`
+
+Pseudo login authentication (have to be added valid GitHub username)
+Dashboard ( user search area, user area, followers area, repo search area and repos area )
+
 ### `npm install`
 
 To isnatll all dependencies. 
