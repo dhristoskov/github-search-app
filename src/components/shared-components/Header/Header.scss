@@ -13,8 +13,14 @@
     padding: 30px 20px;
     justify-content: space-between;
 
-    &-icon {
-        font-size: 24px;
-        color: #BAC9BA;
+    &-back {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &__icon {
+            font-size: 24px;
+            color: #BAC9BA;
+            margin-right: 10px;
+        }
     }
 }

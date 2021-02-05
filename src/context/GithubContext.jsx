@@ -16,6 +16,7 @@ const GitHubContextProvider = ( props ) => {
     const [ repos, setRepos ] = useState(reposInfo);
     const [ followers, setFollowers ] = useState(followersInfo);
     const [ loading, setLoading ] = useState(false);
+    const [ logedIn, setLogedIn] = useState(false);
 
     const searchUser = async (newUser) =>{
         setLoading(true);
@@ -33,6 +34,10 @@ const GitHubContextProvider = ( props ) => {
             await axios.get(`${followers_url}`)
             .then(res => setFollowers(res.data))
             .catch((err) => console.log(err));
+
+            setLogedIn(true);
+        }else {
+            setLogedIn(false);
         }
 
         setLoading(false);
@@ -40,7 +45,15 @@ const GitHubContextProvider = ( props ) => {
 
     return (
         <GitHubContext.Provider
-        value={{ user, repos, followers, searchUser, loading }}
+        value={{ 
+            user, 
+            repos, 
+            followers, 
+            searchUser, 
+            loading, 
+            logedIn, 
+            setLogedIn 
+        }}
         >
             { props.children }
         </GitHubContext.Provider>

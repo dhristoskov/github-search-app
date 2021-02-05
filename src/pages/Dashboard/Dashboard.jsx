@@ -10,11 +10,12 @@ import Header from '../../components/shared-components/Header/Header';
 
 const Dashboard = () => {
 
-    const { user, followers, repos, loading, searchUser } = useContext(GitHubContext);
+    const { user, followers, repos, loading, searchUser, setLogedIn } = useContext(GitHubContext);
 
     return(
         <Fragment>
-            <Header searchUser={searchUser}/>
+            <Header searchUser={searchUser}
+                    setLogedIn={setLogedIn}/>
             <Layout>    
             { 
                     loading 
